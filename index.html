@@ -40,7 +40,9 @@
     </div>
   </header>
   <main class="main">
-    <section class="hero section">
+    <section class="hero">
+      <div class="figure"></div>
+      <!-- <img src="/images/bg-curvy-desktop.svg" alt="" class="figure"> -->
       <div class="hero__container container">
         <picture>
           <img src="images/illustration-intro.png" alt="illustration-intro">
@@ -57,28 +59,35 @@
       <ul class="benefits__list">
         <li class="benefits__element">
           <img class="benefits__image" src="/images/icon-access-anywhere.svg" alt="">
-          <h3 class="benefits__title">Access your files, anywhere</h3>
-          <p class="benefits__text">The ability to use a smartphone, tablet, or computer to access your account means
-            your files follow you everywhere.</p>
+          <div>
+            <h3 class="benefits__title">Access your files, anywhere</h3>
+            <p class="benefits__text">The ability to use a smartphone, tablet, or computer to access your account means
+              your files follow you everywhere.</p>
+          </div>
         </li>
         <li class="benefits__element">
           <img class="benefits__image" src="/images/icon-security.svg" alt="">
-          <h3 class="benefits__title">Security you can trust</h3>
-          <p class="benefits__text">2-factor authentication and user-controlled encryption are just a couple of the
-            security
-            features we allow to help secure your files.</p>
+          <div>
+            <h3 class="benefits__title">Security you can trust</h3>
+            <p class="benefits__text">2-factor authentication and user-controlled encryption are just a couple of the
+              security features we allow to help secure your files.</p>
+          </div>
         </li>
         <li class="benefits__element">
           <img class="benefits__image" src="/images/icon-collaboration.svg" alt="">
-          <h3 class="benefits__title">Real-time collaboration</h3>
-          <p class="benefits__text">Securely share files and folders with friends, family and colleagues for live
-            collaboration. No email attachments required.</p>
+          <div>
+            <h3 class="benefits__title">Real-time collaboration</h3>
+            <p class="benefits__text">Securely share files and folders with friends, family and colleagues for live
+              collaboration. No email attachments required.</p>
+          </div>
         </li>
         <li class="benefits__element">
           <img class="benefits__image" src="/images/icon-any-file.svg" alt="">
-          <h3 class="benefits__title">Store any type of file</h3>
-          <p class="benefits__text">Whether you're sharing holidays photos or work documents, Fylo has you covered
-            allowing for all file types to be securely stored and shared.</p>
+          <div>
+            <h3 class="benefits__title">Store any type of file</h3>
+            <p class="benefits__text">Whether you're sharing holidays photos or work documents, Fylo has you covered
+              allowing for all file types to be securely stored and shared.</p>
+          </div>
         </li>
       </ul>
     </section>
@@ -94,9 +103,9 @@
         <p class="feature__text">Securely share files and folders with friends, family and colleagues for live
           collaboration. No email
           attachments required.</p>
-        <a href="#" class="">
+        <a href="#" class="feature-link">
           <span>See how Fylo works</span>
-          <img src="" alt="">
+          <img class="feature-link__icon" src="/images/icon-arrow.svg" alt="icon arrow">
         </a>
       </div>
     </section>
@@ -136,7 +145,8 @@
   <form class="form">
     <div class="form__container container">
       <h2 class="title">Get early access today</h2>
-      <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+      <p class="form__text">It only takes a minute to sign up and our free starter tier is extremely generous. If you
+        have any
         questions, our support team would be happy to help you.</p>
       <div class="form__wrapp">
         <input type="text" class="form__input">
@@ -155,31 +165,39 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua</p>
       </div>
-      <ul>
-        <li>
+      <ul class="contact">
+        <li class="contac__element">
           <img class="footer__icon" src="/images/icon-phone.svg" alt="">
           <p>+1-543-123-4567</p>
         </li>
-        <li>
+        <li class="contac__element">
           <img class="footer__icon" src="/images/icon-email.svg" alt="">
           <p>example@fylo.com</p>
         </li>
       </ul>
-      <ul>
-        <li>About Us</li>
-        <li>Jobs</li>
-        <li>Press</li>
-        <li>Blog</li>
+      <ul class="links">
+        <li>
+          <a href="#" class="links__link">About Us</a>
+        </li>
+        <li>
+          <a href="#" class="links__link">Jobs</a>
+        </li>
+        <li>
+          <a href="#" class="links__link">Press</a>
+        </li>
+        <li>
+          <a href="#" class="links__link">Blog</a>
+        </li>
       </ul>
-      <ul>
+      <ul class="links">
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#" class="links__link">Contact Us</a>
         </li>
         <li>
-          <a href="#">Terms</a>
+          <a href="#" class="links__link">Terms</a>
         </li>
         <li>
-          <a href="#">Privacy</a>
+          <a href="#" class="links__link">Privacy</a>
         </li>
       </ul>
       <ul class="icons">

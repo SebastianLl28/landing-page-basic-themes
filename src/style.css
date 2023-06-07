@@ -152,6 +152,7 @@ body {
 
   --sizeTitle: 2.5em;
   --sizeText: 1.2em;
+  --sizeTextsmall: 1em;
 
   --containerPadding: 0px;
   --maxWidth: 1300px;
@@ -208,8 +209,9 @@ body {
 
 /* Main */
 .main {
-  background-color: var(--primary100);
   color: var(--colorText);
+  position: relative;
+  background-color: var(--primary200);
 }
 
 /* Nav */
@@ -232,18 +234,28 @@ body {
 .link:hover {
   color: var(--colorText);
   text-decoration: underline;
+  font-weight: var(--weightSecondary);
 }
 
 /* hero */
+
+.hero {
+  background-color: var(--primary100);
+  padding-bottom: 10rem;
+  position: relative;
+}
 
 .hero__container {
   width: 100%;
   max-width: 50rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   display: grid;
   gap: 3rem;
 }
+
 
 .hero__info {
   display: grid;
@@ -270,6 +282,7 @@ body {
   grid-auto-rows: 1fr;
   justify-items: center;
   gap: 6rem 0;
+  padding: 0 5rem;
 }
 
 .benefits__element {
@@ -277,13 +290,25 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1em;
+  gap: 1.2em;
   width: min(25rem, 100%);
 }
 
 .benefits__image {
   height: 6rem;
   width: auto;
+}
+
+.benefits__title {
+  font-size: calc(var(--sizeText) + .1em);
+  font-weight: var(--weightSecondary);
+  font-family: var(--fontSecondary);
+  line-height: 2.1em;
+}
+
+.benefits__text {
+  font-size: var(--sizeTextsmall);
+  font-family: var(--fontPrimary);
 }
 
 @media screen and (max-width: 915px) {
@@ -314,6 +339,31 @@ body {
   gap: 1em;
 }
 
+.feature__text {
+  font-size: var(--sizeTextsmall);
+  font-family: var(--fontPrimary);
+  font-weight: var(--weightPrimary);
+}
+
+.feature-link {
+  border-bottom: 1px solid var(--secondary);
+  color: var(--secondary);
+  justify-self: start;
+  display: flex;
+  gap: .4em;
+  padding-bottom: 5px;
+  align-items: center;
+
+  font-size: var(--sizeTextsmall);
+  font-family: var(--fontPrimary);
+  font-weight: var(--weightPrimary);
+}
+
+.feature-link__icon {
+  height: 1.2em;
+  width: auto;
+}
+
 /* testimony */
 .testimony__list {
   position: relative;
@@ -338,6 +388,7 @@ body {
   grid-template-rows: 1fr .8fr;
   grid-template-areas: 'image name' 'image description';
   gap: 0 .5em;
+  align-items: center;
 }
 
 .testimony__image {
@@ -350,6 +401,13 @@ body {
 .testimony__profile {
   grid-area: description;
   font-size: .6em;
+}
+
+.testimony__text {
+  line-height: 1.6em;
+  font-family: var(--fontPrimary);
+  font-size: var(--sizeTextsmall);
+  font-weight: var(--weightPrimary);
 }
 
 .testimony__name {
@@ -367,20 +425,27 @@ body {
 
 /* form */
 .form {
-  background-color: var(--primary100);
+  background-color: var(--primary200);
   color: var(--colorText);
 }
 
 .form__container {
   background-color: var(--primary400);
   display: grid;
-  gap: 1.2em;
+  gap: 1.6em;
   width: min(50rem, 100%);
   padding: 2rem 3rem;
   text-align: center;
   border-radius: 5px;
   position: relative;
   transform: translateY(50%);
+}
+
+.form__text {
+  font-size: var(--sizeTextsmall);
+  font-family: var(--fontPrimary);
+  font-weight: var(--weightPrimary);
+  /* color: red; */
 }
 
 .form__wrapp {
@@ -414,21 +479,24 @@ body {
   background-color: var(--primary300);
   color: var(--colorText);
   padding: 3rem 0;
+  font-family: var(--fontPrimary);
+  font-weight: var(--weightPrimary);
 }
 
 .footer__container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr .5fr .5fr 1fr;
+  grid-template-columns: 1.5fr .8fr .5fr .5fr .5fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'logo logo logo logo logo'
     'location contact navigation nav icons';
-  padding-top: 8rem;
-  gap: 2rem 0;
+  padding-top: 4rem;
+  gap: 2rem 3rem;
 }
 
 .footer__picture {
   grid-area: logo;
+  align-self: end;
 }
 
 .footer__logo {
@@ -475,4 +543,40 @@ body {
 
 .icons__element:hover {
   border-color: var(--terceary);
+}
+
+/* Contact (footer) */
+.contact {
+  display: grid;
+  gap: 1em;
+  grid-template-rows: min-content;
+}
+
+.contac__element {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+}
+
+/* Links (footer) */
+.links {
+  display: grid;
+  gap: 1em;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+}
+
+.links__link:hover {
+  font-weight: var(--weightSecondary);
+}
+
+.figure {
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  bottom: -5%;
+  background-image: url('../images/bg-curvy-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 0;
 }
