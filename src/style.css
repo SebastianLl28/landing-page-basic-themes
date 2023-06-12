@@ -719,3 +719,20 @@ body {
     --containerPadding: 1rem;
   }
 }
+
+/* .theme {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  background-color: #212121;
+  border-radius: 50%;
+  bottom: 2rem;
+  right: 2rem;
+  box-shadow: 0px 0px 20px -5px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+} */
